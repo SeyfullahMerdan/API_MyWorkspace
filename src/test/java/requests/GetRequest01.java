@@ -12,8 +12,8 @@ public class GetRequest01 {
     // API'de Gherkin language anatotionları kullanıyoruz. Given, When, Then, And sözcükleri Gherkinden
     // gelen ifadelerdir.
 
-    // given => önce gereklilikleri bildiriyorum. Dili vs. belirtmiş oluyorum.
-    // when => kullanıcı olarak istedigimi belirtecem
+    // given => önce gereklilikleri bildiriyorum. Dili vs. belirtmiş oluyorum.   accept gibi
+    // when => kullanıcı olarak istedigimi belirtecem..  get,post,delete,put
     // then => çıktıları ifade ediyor. Assert işlemleri olduğu zaman genelde bu ifadeyi kullanırım
     // and => çoklu işlem olursa kullanılır.
  // Gherkin dili ile ilgili sadece bu kısmı kullanıyoruz.

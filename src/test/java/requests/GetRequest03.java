@@ -16,7 +16,7 @@ public class GetRequest03 {
         String url="https://restful-booker.herokuapp.com/booking/1001";
 
         // request gönderdim ve gelen response objeme assign ettim, kullacam.
-        Response response=given().accept("application/json").when().get(url);
+        Response response=given().accept(ContentType.JSON).when().get(url);
 
         // Expected data oluşturmuyorum çünkü hata verecek, bekledigim bir data yok.
 
@@ -31,6 +31,7 @@ public class GetRequest03 {
         Assert.assertFalse(response.asString().contains("API"));
 
         // asString methodu ile Json formatında gelen response'u Stringe çevirdik.
+
 
     }
 

@@ -25,7 +25,7 @@ public class GetRequest04 {
      */
 
     @Test
-    public void test03(){
+    public void test04(){
 
         String url="https://restful-booker.herokuapp.com/booking/7";
         Response response=given().accept("application/json").when().get(url);

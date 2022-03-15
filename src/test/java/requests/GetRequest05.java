@@ -23,7 +23,7 @@ public class GetRequest05 {
 
 
     @Test
-    public void test03(){
+    public void test05(){
 
         String url="https://restful-booker.herokuapp.com/booking/5";
 

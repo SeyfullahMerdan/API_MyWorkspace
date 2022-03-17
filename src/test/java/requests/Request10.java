@@ -25,9 +25,9 @@ ve gelen yaslar icinde 21, 61, ve 23 degerlerinden birinin oldugunu test edin.
     @Test
     public void test01() {
 
-        spec.pathParams("1","api","2","v1","3","employees");
+        spec03.pathParams("1","api","2","v1","3","employees");
 
-        Response response=given().contentType(ContentType.JSON).spec(spec).when().get("/{1}/{2}/{3}");
+        Response response=given().contentType(ContentType.JSON).spec(spec03).when().get("/{1}/{2}/{3}");
         response.prettyPrint();
 
         JsonPath json= response.jsonPath();   // Sadece Body var
@@ -38,11 +38,6 @@ ve gelen yaslar icinde 21, 61, ve 23 degerlerinden birinin oldugunu test edin.
         response.then().assertThat().body("data" , hasSize(24) ,
                                           "data.employee_name" , Matchers.hasItem("Ashton Cox"),
                                            "data.employee_age" , Matchers.hasItems(21, 6, 23)  );
-
-
-
-
-
 
 
     }

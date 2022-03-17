@@ -6,13 +6,13 @@ import org.junit.Before;
 
 public class DummyBaseUrl {
 
-    protected RequestSpecification spec;
+    protected RequestSpecification spec03;
 
     @Before
     public void setUp(){
 
         String uri="http://dummy.restapiexample.com";
-        spec=new RequestSpecBuilder().setBaseUri(uri).build();
+        spec03=new RequestSpecBuilder().setBaseUri(uri).build();
 
     }
 

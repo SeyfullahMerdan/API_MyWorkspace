@@ -28,7 +28,9 @@ public class GetRequest08 extends HerokuAppBaseUrl {
 
         response.prettyPrint();
 
-        // Assert.assertEquals(200, response.statusCode());  önce expected sonra actual çünkü JUnit!!
+        // Assert.assertEquals(200, response.statusCode());
+        // Matcher veya Json(sadece body)kullanmak istemiyorsak bu şekilde de dogrulama yapabiliriz.
+        // Önce expected sonra actual çünkü JUnit!!
 
         JsonPath json=response.jsonPath(); // jsonpath bize sadece body döndürür. Headers döndürmez!
 

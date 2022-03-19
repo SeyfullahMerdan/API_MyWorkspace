@@ -14,7 +14,7 @@ public class DummyTestData {
         onbirinci.put("employee_name" , "Jena Gaines");
         onbirinci.put("employee_salary" , 90560);
         onbirinci.put("employee_age" , 30);
-        onbirinci.put("profil_image" , "");
+        onbirinci.put("profile_image" , "");
 
         List<Integer> yaslar=new ArrayList<>();
         yaslar.add(40);
@@ -25,13 +25,12 @@ public class DummyTestData {
         expectedData.put("statuscode" , 200);
         expectedData.put("besincicalisaninismi" , "Airi Satou");
         expectedData.put("calisansayisi" , 24);
-        expectedData.put("sondanikincicalisanmaas" , 106458);
+        expectedData.put("sondanikincicalisanmaas" , 106450);
         expectedData.put("onbirincicalisan" , onbirinci);
         expectedData.put("yas" , yaslar);
 
         return expectedData;
     }
-
 
 
 

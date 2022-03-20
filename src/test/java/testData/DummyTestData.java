@@ -46,6 +46,52 @@ public class DummyTestData {
 
 
 
+    public HashMap<String, Object> setUpPostRequestBody () {
+
+        HashMap<String, Object> requestBody=new HashMap<>();
+        requestBody.put("name" , "Seyfo");
+        requestBody.put("salary" , "52000");
+        requestBody.put("age" , "35" );
+        requestBody.put("profile_image" , "yok");
+
+        return requestBody;
+    }
+
+
+
+    public HashMap<String, Object> setUpPostExpectedData () {
+
+        HashMap<String, Object> bodyData=new HashMap<>();
+        bodyData.put("name" , "Seyfo");
+        bodyData.put("salary" , "52000");
+        bodyData.put("age" , "35");
+        bodyData.put("profile_image" , "yok");
+
+        HashMap<String, Object> requestBody=new HashMap<>();
+        requestBody.put("statuscode" , 200);
+        requestBody.put("status" , "success");
+        requestBody.put("message" , "Successfully! Record has been added." );
+        requestBody.put("data" , bodyData );
+
+        return requestBody;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

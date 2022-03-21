@@ -31,13 +31,13 @@ public class HerokuAppTestData {
 
 
         JSONObject bookingDates=new JSONObject();  // Data türünü kendisi belirliyor.!!!
-        bookingDates.put("checkin", "2022-11-22");
-        bookingDates.put("checkout", "2022-11-11");
+        bookingDates.put("checkin", "2022-01-10");
+        bookingDates.put("checkout", "2022-02-11");
 
 
         JSONObject expectedRequest=new JSONObject();
-        expectedRequest.put("firstname", "seyfo");
-        expectedRequest.put("lastname", "reis");
+        expectedRequest.put("firstname", "seyfi");
+        expectedRequest.put("lastname", "baba");
         expectedRequest.put("totalprice", 654);
         expectedRequest.put("depositpaid", true);
         expectedRequest.put("bookingdates", bookingDates);

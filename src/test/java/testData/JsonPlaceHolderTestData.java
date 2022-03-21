@@ -27,8 +27,6 @@ public class JsonPlaceHolderTestData {
 
 
 
-
-
     public JSONObject setUpTestAndRequestData() {
 
         JSONObject expectedRequest=new JSONObject();
@@ -41,6 +39,22 @@ public class JsonPlaceHolderTestData {
 
         return expectedRequest;
     }
+
+
+
+
+
+    public JSONObject setUpPutData() {
+
+        JSONObject expectedRequest = new JSONObject();
+        expectedRequest.put("userId" , 333);
+        expectedRequest.put("title" , "Come Back Here!");
+        expectedRequest.put("completed" , false);
+
+        return expectedRequest;
+
+    }
+
 
 
 

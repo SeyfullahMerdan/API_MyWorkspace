@@ -1,5 +1,7 @@
 package testData;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -80,13 +82,17 @@ public class DummyTestData {
 
 
 
+    public JSONObject setUpDeleteExpectedData () {
+
+        JSONObject expectedData=new JSONObject();
+        expectedData.put("status" , "success");
+        expectedData.put("data" , "2");
+        expectedData.put("message" , "Successfully! Record has been deleted");
+
+        return expectedData;
 
 
-
-
-
-
-
+    }
 
 
 

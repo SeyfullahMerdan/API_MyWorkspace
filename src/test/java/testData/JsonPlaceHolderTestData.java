@@ -58,6 +58,27 @@ public class JsonPlaceHolderTestData {
 
 
 
+    public JSONObject setUpPatchRequestData() {
+
+        JSONObject requestData=new JSONObject();
+        requestData.put("title" , "API calismaliyim");
+        return requestData;
+    }
+
+    public JSONObject setUpPatchExpectedData() {
+
+        JSONObject expectedData=new JSONObject();
+        expectedData.put("title" , "API calismaliyim");
+        expectedData.put("userId" , 10);
+        expectedData.put("completed" , true);
+        expectedData.put("id" , 198);  // Patch işleminde datayı komple degiştirmiyoruz bu yüzden yeni bir
+        // ID atamıyoruz,mevcut ID ile tekrardan geliyor.Bekledigim ID numarası bu..Bu ID no ile bana response yapacak.
+
+        return expectedData;
+    }
+
+
+
 
 
 

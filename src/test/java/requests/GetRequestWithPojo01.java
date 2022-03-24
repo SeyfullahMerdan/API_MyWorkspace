@@ -13,8 +13,7 @@ import static io.restassured.RestAssured.given;
 
 public class GetRequestWithPojo01 extends DummyBaseUrl {
 
-    /*
-    {
+    /* {
     "status": "success",
     "data":
         {
@@ -25,8 +24,7 @@ public class GetRequestWithPojo01 extends DummyBaseUrl {
             "profile_image": ""
         }
          "message": "Successfully! Record has been fetched."
-}
-     */
+} */
 
 
     @Test
@@ -57,7 +55,7 @@ public class GetRequestWithPojo01 extends DummyBaseUrl {
         Assert.assertEquals( expectedData.getData().getprofile_image() , actualData.getData().getprofile_image() );
         Assert.assertEquals( expectedData.getMessage() , actualData.getMessage() );
 
-
+//=====================================================================================================================
         // Serilization Java yapısında olan dataları Json formatına dönüştürme işlemidir.
 
         // Gson sınıfından bir obje oluşturulur
@@ -65,20 +63,14 @@ public class GetRequestWithPojo01 extends DummyBaseUrl {
         String jsonFromJava=gson.toJson(actualData);
         System.out.println("json formatı = " + jsonFromJava);
 
+        Gson gsonObjesi=new Gson();
+        String javaDan=gsonObjesi.toJson(expectedData);
+        System.out.println("javadan jsona = " + javaDan);
 
-
-
-
-
-
-
-
-
-
+//=====================================================================================================================
 
 
     }
-
 
 
 }

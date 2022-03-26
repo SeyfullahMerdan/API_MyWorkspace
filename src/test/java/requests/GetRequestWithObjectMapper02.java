@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class GetRequestWithObjectMapper02 extends HerokuAppBaseUrl {
     /*
@@ -76,6 +77,26 @@ Olduğunu Object Mapper kullanarak test edin.
         Assert.assertEquals( ((Map)expectedData.get("bookingdates")).get("checkout") ,
                              ((Map)actualData.get("bookingdates")).get("checkout")
         );
+
+
+        //========================================================================================
+
+        response.then()
+                .assertThat().statusCode(200)
+                .body( "firstname" , equalTo(expectedData.get("firstname")) ,
+                        "lastname" , equalTo(expectedData.get("lastname")) ,
+                        "totalprice" , equalTo(expectedData.get("totalprice")),
+                        "depositpaid" ,equalTo(expectedData.get("depositpaid"))
+                );
+
+
+        //==========================================================================================
+
+
+
+
+
+
 
 
 

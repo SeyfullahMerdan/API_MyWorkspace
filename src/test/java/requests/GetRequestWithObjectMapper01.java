@@ -10,6 +10,7 @@ import utilities.JsonUtil;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class GetRequestWithObjectMapper01 extends JsonPlaceHolderBaseUrl {
 
@@ -53,11 +54,19 @@ public class GetRequestWithObjectMapper01 extends JsonPlaceHolderBaseUrl {
 
 
 
+        //===========================================================================
+
+        response.then()
+                .assertThat()
+                .contentType(ContentType.JSON)
+                .body("userId", equalTo(expectedData.get("userId")),
+                        "id"   , equalTo(expectedData.get("id"))  ,
+                        "title"     , equalTo(expectedData.get("title")) ,
+                        "completed" , equalTo("completed")
+                );
 
 
-
-
-
+        //============================================================================
 
 
 
